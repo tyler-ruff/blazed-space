@@ -1,0 +1,7 @@
+@media only screen and (max-width: 1023px){
+    ul li{
+        text-align: center;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+}

@@ -1,3 +1,22 @@
 .is-active{
     text-decoration:underline;
 }
+.burger{
+    color: #004ba8;
+    display: none;
+}
+.header-nav-menu-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1023px){
+    .header-nav-menu-mobile{
+        display: block;
+    }
+    .burger{
+        display:block;
+    }
+    .header-nav-links{
+        display: none;
+    }
+}
