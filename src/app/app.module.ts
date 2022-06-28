@@ -9,6 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LazyLoadDirective } from './lazyload.directive';
 import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { ExploreComponent } from './explore/explore.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { NavComponent } from './nav/nav.component';
     LazyLoadDirective,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    AboutComponent,
+    ExploreComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
