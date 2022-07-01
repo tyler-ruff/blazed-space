@@ -2,20 +2,20 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aab79398-3282-4561-82ca-e1c9b92b1648/deploy-status)](https://app.netlify.com/sites/blazed-space/deploys)
 
-Social networking platform, in the Blazed One solution.
+Software release sharing platform.
 
 - [Visit Website](https://blazed.space/)
 
 ## Learn More
-The Blazed Space platform allows seamless integration between various social providers, and creates a unified (but grouped by platform) social experience. In addition, the Blazed Space platform empowers users to craft their own spaces, and allows for unique customization of their spaces.
+The Blazed Space platform allows software publishers to share released software with their users. We provide extensive QA (quality assurance) measures to prevent the sharing of malware, community orchestration tools to encourage user-discussion and feedback, and release/version management integrations with your favorite platforms.
 
 # Credits
 ![Last Commit](https://img.shields.io/github/last-commit/tyler-ruff/blazed-space?style=for-the-badge "Last Commit")
 
 ## Partners
+- [Github](https://github.com/)
 - [Facebook](https://facebook.com/)
 - [Twitter](https://twitter.com/)
-- [Instagram](https://instagram.com/)
 
 ## Development Team
 - Maintained by: [The Blazed Development Group](https://www.facebook.com/groups/blzdev)

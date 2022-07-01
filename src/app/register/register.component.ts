@@ -14,7 +14,6 @@ export class RegisterComponent implements OnInit {
     this.isChecked = values.currentTarget.checked;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

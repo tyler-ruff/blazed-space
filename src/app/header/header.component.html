@@ -28,21 +28,31 @@
 
 
                         <ul class="border-t space-y-2 pt-2 lg:space-y-0 lg:space-x-2 lg:pt-0 lg:pl-2 lg:border-t-0 lg:border-l lg:items-center lg:flex">
-                            <li>
-                                <a href="/login" title="Log In" class="flex w-full py-3 px-6 rounded-md text-center transition sm:w-max">
-                                    <span class="block text-blue-800 font-semibold">
-                                        Login
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/register" title="Sign up" class="flex w-full py-3 px-6 rounded-md text-center transition bg-blue-700 hover:bg-blue-800 active:bg-blue-900 focus:bg-blue-900 sm:w-max">
-                                    <span class="block text-white font-semibold">
-                                        Register
-                                    </span>
-                                </a>
-                            </li>
+                            <ng-container *ngIf="auth.user | async as user; else showLogin">
+                                <li>
+                                    <a href="/profile" class="inline-flex py-3 px-6 rounded-md text-center transition bg-blue-700 hover:bg-blue-800 active:bg-blue-900 focus:bg-blue-900 sm:w-max">
+                                        <span class="block text-white font-semibold">
+                                            Profile
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="logout()" class="inline-flex cursor-pointer py-3 px-6 rounded-md text-center transition hover:underline text-red-800 sm:w-max">
+                                        <span class="block font-semibold">
+                                            Logout
+                                        </span>
+                                    </a>
+                                </li>
+                            </ng-container>
+                            <ng-template #showLogin>
+                                <li>
+                                    <a (click)="login()" title="Sign up" class="flex w-full cursor-pointer py-3 px-6 rounded-md text-center transition bg-blue-700 hover:bg-blue-800 active:bg-blue-900 focus:bg-blue-900 sm:w-max">
+                                        <span class="block text-white font-semibold">
+                                            Login/Register
+                                        </span>
+                                    </a>
+                                </li>
+                            </ng-template>
                         </ul>
                     </div>
                 </div>
