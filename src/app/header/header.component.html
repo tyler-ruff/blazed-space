@@ -1,5 +1,5 @@
 <header>
-    <nav class="w-full lg:bg-white bg-indigo-200">
+    <nav class="w-full bg-gradient-to-b from-indigo-100 to-indigo-200 border-b border-blue-800">
         <div class="container m-auto px-6 md:px-12 lg:px-6">
             <div class="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0">
                 <div class="w-full flex justify-between lg:w-auto">
@@ -52,14 +52,62 @@
                                         </span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/forgot" title="Forgot password?" class="flex text-gray-600 hover:text-gray-700">
+                                        <i>
+                                            <svg width="25" height="25" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.57 8.033H7.25C7.22 6.147 8.68 5.5 10.006 5.5c1.397 0 2.673.73 2.673 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.355H9.117l-.007-.463c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.901 0-1.358.603-1.358 1.384zm1.251 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </i>
+                                    </a>
+                                </li>
                             </ng-template>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-full absolute header-nav-menu-mobile bg-indigo-200" *ngIf="burgerVisible">
+        <div class="w-full h-full absolute header-nav-menu-mobile bg-indigo-200 pt-10 border-t border-blue-800" *ngIf="burgerVisible">
             <app-nav></app-nav>
+            <ul class="p-10 w-full text-center">
+                <ng-container *ngIf="auth.user | async as user; else showLogin">
+                    <li>
+                        <a href="/profile" class="inline-flex py-3 px-6 rounded-md text-center transition bg-blue-700 hover:bg-blue-800 active:bg-blue-900 focus:bg-blue-900 sm:w-max">
+                            <span class="block text-white font-semibold">
+                                Profile
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="logout()" class="inline-flex cursor-pointer py-3 px-6 mt-10 rounded-md text-center transition hover:underline text-red-800 sm:w-max">
+                            <span class="block font-semibold">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                </ng-container>
+                <ng-template #showLogin>
+                    <li class="text-center">
+                        <a (click)="login()" class="inline-flex w-half cursor-pointer py-3 px-6 rounded-md text-center transition bg-blue-800 hover:bg-blue-900 active:bg-blue-900 focus:bg-blue-900 sm:w-max">
+                            <span class="block text-center text-white font-semibold">
+                                Login/Register
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/forgot" title="Forgot password?" class="inline-flex text-center text-gray-600 hover:text-gray-700 mt-10 p-3">
+                            <i>
+                                <svg width="25" height="25" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.57 8.033H7.25C7.22 6.147 8.68 5.5 10.006 5.5c1.397 0 2.673.73 2.673 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.355H9.117l-.007-.463c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.901 0-1.358.603-1.358 1.384zm1.251 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" clip-rule="evenodd"/>
+                                </svg>
+                            </i>
+                            <span class="pl-2">
+                                Forgot password?
+                            </span>
+                        </a>
+                    </li>
+                </ng-template>
+            </ul>
         </div>
     </nav>
 </header>

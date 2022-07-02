@@ -11,8 +11,6 @@ import { LazyLoadDirective } from './lazyload.directive';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ExploreComponent } from './explore/explore.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -20,6 +18,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ResetComponent } from './reset/reset.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +29,9 @@ import { ResetComponent } from './reset/reset.component';
     NavComponent,
     AboutComponent,
     ExploreComponent,
-    LoginComponent,
-    RegisterComponent,
     ForgotComponent,
-    ResetComponent
+    ResetComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
