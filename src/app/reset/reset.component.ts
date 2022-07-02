@@ -25,7 +25,7 @@ export class ResetComponent implements OnInit {
       this.mode = params['mode'];
       this.oob = params['oobCode'];
     });
-    //let verify: Promise<any> = this.verifyCode();
+    let verify: Promise<any> = this.verifyCode();
   }
 
   public async verifyCode(): Promise<any>{
