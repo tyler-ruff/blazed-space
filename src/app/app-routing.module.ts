@@ -6,6 +6,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ResetComponent } from './reset/reset.component';
 import { UnknownComponent } from './unknown/unknown.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forgot', component: ForgotComponent },
+  { path: 'reset', component: ResetComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: UnknownComponent },
 ];

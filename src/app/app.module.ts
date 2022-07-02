@@ -19,6 +19,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     ExploreComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotComponent
+    ForgotComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,
