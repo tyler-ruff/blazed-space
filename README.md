@@ -2,20 +2,37 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aab79398-3282-4561-82ca-e1c9b92b1648/deploy-status)](https://app.netlify.com/sites/blazed-space/deploys)
 
-Software release sharing platform.
+Awesome website by Blazed Labs LLC.
 
 - [Visit Website](https://blazed.space/)
 
-## Learn More
-The Blazed Space platform allows software publishers to share released software with their users. We provide extensive QA (quality assurance) measures to prevent the sharing of malware, community orchestration tools to encourage user-discussion and feedback, and release/version management integrations with your favorite platforms.
+## Installing
+To install, run the following command at the root of the directory:
+```sh
+npm install
+```
+
+## Live Development Server
+To run a local development server, first ensure you have NPM installed on your machine.
+Then, install the react-scripts package globally:
+
+```sh
+npm install -g react-scripts
+```
+
+Then, run the following command:
+
+```sh
+npm start
+```
 
 # Credits
 ![Last Commit](https://img.shields.io/github/last-commit/tyler-ruff/blazed-space?style=for-the-badge "Last Commit")
 
 ## Partners
-- [Github](https://github.com/)
 - [Facebook](https://facebook.com/)
 - [Twitter](https://twitter.com/)
+- [Instagram](https://instagram.com/)
 
 ## Development Team
 - Maintained by: [The Blazed Development Group](https://www.facebook.com/groups/blzdev)
@@ -25,7 +42,7 @@ The Blazed Space platform allows software publishers to share released software 
 - Design, Project Advising: [Matthew Ruff](https://github.com/matt-ruff)
 
 ## Special Thanks
-- [Fire Angular](https://github.com/blazed-space/fire-angular)
-- [AngularJS](https://angular.io/)
+- [Fire React](https://github.com/blazed-space/fire-react)
+- [React](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Netlify](https://netlify.com/)
