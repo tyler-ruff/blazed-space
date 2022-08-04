@@ -1,6 +1,6 @@
 {
-    "short_name": "blazed-space",
-    "name": "Blazed Space",
+    "short_name": "fire-js",
+    "name": "Fire for HTML5/JS",
     "icons": [
       {
         "src": "https://blazed.sirv.com/logo/BLZ-blue.png?w=192&h=192",
@@ -18,4 +18,4 @@
     "scope": "/",
     "theme_color": "#000000",
     "description": "We turn Dreams into Reality."
-  }
+}

@@ -1,38 +1,20 @@
-# Blazed Space
+# Fire for HTML5/JS
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/aab79398-3282-4561-82ca-e1c9b92b1648/deploy-status)](https://app.netlify.com/sites/blazed-space/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aab79398-3282-4561-82ca-e1c9b92b1648/deploy-status)](https://app.netlify.com/sites/fire-core/deploys)
 
-Awesome website by Blazed Labs LLC.
+Fire core CSS, HTML, and JS framework/boilerplate.
 
-- [Visit Website](https://blazed.space/)
+- [Visit Website](https://fire-core.netlify.app/)
 
-## Installing
-To install, run the following command at the root of the directory:
-```sh
-npm install
-```
-
-## Live Development Server
-To run a local development server, first ensure you have NPM installed on your machine.
-Then, install the react-scripts package globally:
-
-```sh
-npm install -g react-scripts
-```
-
-Then, run the following command:
-
-```sh
-npm start
-```
+## Features
+- HTML5 Boilerplate
+- TailwindCSS
+- IE 9 Support
+- Mobile Burger Menu
+- stop-blink and custom-scrollbar
 
 # Credits
-![Last Commit](https://img.shields.io/github/last-commit/tyler-ruff/blazed-space?style=for-the-badge "Last Commit")
-
-## Partners
-- [Facebook](https://facebook.com/)
-- [Twitter](https://twitter.com/)
-- [Instagram](https://instagram.com/)
+![Last Commit](https://img.shields.io/github/last-commit/blazed-space/fire?style=for-the-badge "Last Commit")
 
 ## Development Team
 - Maintained by: [The Blazed Development Group](https://www.facebook.com/groups/blzdev)
@@ -42,7 +24,5 @@ npm start
 - Design, Project Advising: [Matthew Ruff](https://github.com/matt-ruff)
 
 ## Special Thanks
-- [Fire React](https://github.com/blazed-space/fire-react)
-- [React](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Netlify](https://netlify.com/)
