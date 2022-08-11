@@ -1,202 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="dns-prefetch" href="//blazed.sirv.com/">
-        <link rel="preconnect" href="https://blazed.sirv.com/">
-        <title>
-            Blazed Space
-        </title>
-        <!-- Favicon -->
-        <link rel="icon" sizes="192x192" href="https://blazed.sirv.com/logo/Beaker-Red.png?w=192&h=192">
-        <link rel="apple-touch-icon" href="https://blazed.sirv.com/logo/Beaker-Red.png?w=180&h=180">
-        <link rel="apple-touch-startup-image" href="https://blazed.sirv.com/logo/Beaker-Red.png?w=180&h=180">
-        <link rel="stylesheet" href="fire.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
-        <link rel="license" href="https://www.blazed.space/LICENSE.txt">
-        <link rel="manifest" href="https://www.blazed.space/manifest.json">
-        <link rel="author" href="https://www.blazed.space/humans.txt">
-        <!-- Meta -->
-        <meta name="msapplication-config" content="https://www.blazed.space/browserconfig.xml">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="application-name" content="Blazed Space">
-        <meta name="apple-mobile-web-app-title" content="Blazed Space">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="google" content="nositelinkssearchbox">
-        <meta name="robots" content="index,follow">
-        <meta name="googlebot" content="index,follow">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@BlazedLabs">
-        <meta name="twitter:url" content="https://www.blazed.space/">
-        <meta name="twitter:title" content="Blazed Space">
-        <meta name="twitter:description" content="We turn dreams into reality.">
-        <meta name="twitter:image" content="https://blazed.sirv.com/blazed.space/erol-ahmed-d3pTF3r_hwY-unsplash.jpg?w=500&h=500">
-        <meta name="twitter:image:alt" content="Photo by Erol Ahmed on Unsplash">
-        <meta property="fb:app_id" content="503698127531557">
-        <meta property="og:url" content="https://www.blazed.space/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Blazed Space">
-        <meta property="og:image" content="https://blazed.sirv.com/blazed.space/erol-ahmed-d3pTF3r_hwY-unsplash.jpg?w=500&h=500">
-        <meta property="og:image:alt" content="Photo by Erol Ahmed on Unsplash">
-        <meta property="og:description" content="We turn dreams into reality.">
-        <meta property="og:site_name" content="Blazed Space">
-        <meta property="og:locale" content="en_US">
-        <meta property="article:author" content="Blazed Labs LLC">
-        <meta itemprop="name" content="Blazed Space">
-        <meta itemprop="description" content="We turn dreams into reality.">
-        <meta itemprop="image" content="https://blazed.sirv.com/logo/Beaker-Dark.png?w=180&h=180">
-
-        <!--[if lt IE 9]>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+      <link rel="stylesheet" href="lib/fire.css">
+      <script src="lib/fire.js"></script>
+      <script src="assets/js/site.blz.js"></script>
+      <script src="assets/js/views/search.blz.js"></script>
+      <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <![endif]-->
+      <![endif]-->
     </head>
     <body>
-        <section class="md:hidden">
-            <div id="off-canvas-menu" class="hidden fixed inset-y-0 right-0 z-50 flex">
-                <div class="w-screen">
-                <div class="flex flex-col h-full divide-y divide-gray-200 bg-gray-50">
-                    <div>
-                    <header class="flex items-center justify-between h-16 pl-6">
-                        <span class="text-sm font-medium tracking-widest uppercase">
-                        Menu
-                        </span>
-            
-                        <button
-                        aria-label="Close menu"
-                        class="w-16 h-16 border-l border-gray-200"
-                        type="button"
-                        onmouseup="toggleBurger();"
-                        >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 mx-auto"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                        </button>
-                    </header>
-            
-                    <nav
-                        class="flex flex-col text-sm font-medium text-gray-500 border-t border-b border-gray-200 divide-y divide-gray-200"
-                    >
-                        <a href="https://www.blazed.space/" class="px-6 py-3">
-                            Home
-                        </a>
-                        <a href="https://blz.one/services" class="px-6 py-3">
-                            Services
-                        </a>
-                        <a href="https://blz.one/products" class="px-6 py-3">
-                            Products
-                        </a>
-                    </nav>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
-        <header id="Top">
-            <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-              <div class="flex items-center justify-between h-16">
-                <div class="flex-1 md:flex md:items-center md:gap-12">
-                  <a class="block text-teal-300 hover:opacity-75" title="Blazed Space" href="https://www.blazed.space/">
-                    <span class="sr-only">Home</span>
-                    <img src="https://blazed.sirv.com/logo/Beaker-Dark.png?w=35&h=35" />
-                  </a>
-                </div>
-          
-                <div class="md:flex md:items-center md:gap-12">
-                  <nav class="hidden md:block" aria-labelledby="header-navigation">
-                    <h2 class="sr-only" id="header-navigation">Header navigation</h2>
-          
-                    <ul class="flex items-center gap-6 text-sm">
-                      <li>
-                        <a class="text-gray-600 transition hover:underline" href="https://www.blazed.space/">
-                          Home
-                        </a>
-                      </li>
-          
-                      <li>
-                        <a class="text-gray-600 transition hover:underline" href="https://blz.one/services">
-                          Services
-                        </a>
-                      </li>
-          
-                      <li>
-                        <a class="text-gray-600 transition hover:underline" href="https://blz.one/products">
-                          Products
-                        </a>
-                      </li>
-
-                    </ul>
-                  </nav>
-          
-                    <div class="block md:hidden">
-                      <button
-                        onmouseup="toggleBurger();"
-                        class="p-2 text-white transition bg-gray-800 rounded "
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M4 6h16M4 12h16M4 18h16"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
-        <hr />
-        <main class="px-5 md:px-0">
-            <article>
-                <h1 class="text-center py-5 text-2xl font-bold">
-                  Search Results
-                </h1>
-                <div class="w-full md:max-w-2xl md:relative md:mx-auto">
-                  <div class="gcse-searchresults-only"></div>
-                </div>    
-            </article>
-        </main>
-        <hr />
-          <footer class="bg-gray-200 text-gray-600 py-5 px-5">
-            <div class="text-center">
-              &copy;2022 <a href="https://blazedlabs.com/" class="hover:underline">Blazed Labs LLC.</a> & <a href="https://ruff-manage.com" class="hover:underline">Ruff Management Inc.</a> All Rights Reserved.
-              (<a class="hover:underline" href="https://blazedlabs.com/privacy">Privacy</a>).
-            </div>
-          </footer>
-        
-          <script>
-            function toggleBurger(){
-                if(document.getElementById('off-canvas-menu').classList.contains('hidden')){
-                    document.getElementById('off-canvas-menu').classList.remove('hidden');
-                } else {
-                    document.getElementById('off-canvas-menu').classList.add('hidden');
-                }
-            }
-          </script>
-          <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-          <script async src="https://cse.google.com/cse.js?cx=07687c4528c094d6c"></script>
+      <script async src="https://cse.google.com/cse.js?cx=07687c4528c094d6c"></script>
+      <script>
+        let page = getPage();
+        const config = build_config(siteConfig, 
+        'Search engine for the Blazed Network..', 
+        page);
+        let pageData = build_routes(page);
+        const app = new Fire(config);
+        create_app(app.config, pageData);
+      </script>
     </body>
 </html>
