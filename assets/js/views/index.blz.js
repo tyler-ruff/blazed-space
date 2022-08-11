@@ -38,23 +38,23 @@ function home(){
                         </p>
                         <p class="mt-5 inline-flex">
                             Awesome Pages:
-                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
                                 Rocket
                             </a>
                             &bull;
-                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
                                 Vapor
                             </a>
                             &bull;
-                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
                                 Triangle
                             </a>
                             &bull;
-                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
                                 Jupiter
                             </a>
                         </p>
-                        <div class="hidden md:inline-flex mt-10 group cursor-pointer" style="float:right">
+                        <div class="hidden md:inline-flex mt-10 group cursor-pointer" style="float:right; margin-top:-20px;">
                             <div x-data="{ dropdownOpen: false }" class="relative">
                                 <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md bg-gray-50 group-hover:bg-gray-300 hover:bg-gray-300 active:bg-gray-300 p-2 focus:outline-none">
                                 <span class="inline-flex">

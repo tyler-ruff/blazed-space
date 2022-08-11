@@ -248,3 +248,8 @@ function build_footer(config){
     document.body.appendChild(blz_footer);
 }
 
+function randomColor(){
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+}
+
