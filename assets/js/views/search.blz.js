@@ -20,9 +20,9 @@ function build_routes(page){
 function results(){
     return `
         <h1 class="text-center py-5 text-2xl font-bold">
-        Search Results
+            Search Results
         </h1>
-        <div class="w-full md:max-w-2xl md:relative md:mx-auto">
+        <div class="w-full md:max-w-2xl md:relative md:mx-auto mb-10">
             <div class="border">
                 <div class="gcse-searchresults-only"></div>
             </div>
