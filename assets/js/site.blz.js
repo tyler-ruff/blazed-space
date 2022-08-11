@@ -182,7 +182,7 @@ function build_content(config, content){
     document.body.appendChild(main);
 }
 
-function build_footer(config, document){
+function build_footer(config){
     const blz_footer = f('blz-footer');
     const footer = f('footer');
     footer.classList.add('bg-gray-900');

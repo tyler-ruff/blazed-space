@@ -22,7 +22,6 @@ function home(){
         <div class="px-5 md:px-0 mt-10 pt-5 md:mt-20">
             <div class="bg-gray-50 py-20">
                 <div class="max-w-2xl mx-auto pt-0 md:pt-10">
-                    <img src="https://blazed.sirv.com/logo/john-mcmahon-ljjcoULkxL8-unsplash.jpg?w=600&h=400" width="600" height="400"/>
                     <form method="get" action="https://www.blazed.space/search.html" class="flex items-center">   
                         <label for="search" class="sr-only">Search</label>
                         <div class="relative w-full">
@@ -39,19 +38,19 @@ function home(){
                         </p>
                         <p class="mt-5 inline-flex">
                             Awesome Pages:
-                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
                                 Rocket
                             </a>
                             &bull;
-                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
                                 Vapor
                             </a>
                             &bull;
-                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
                                 Triangle
                             </a>
                             &bull;
-                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 text-sm capitalize text-gray-700 hover:underline">
                                 Jupiter
                             </a>
                         </p>
