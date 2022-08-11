@@ -37,20 +37,22 @@ function home(){
                         ⚡ Search powered by:&nbsp;<a href="https://programmablesearchengine.google.com/" class="hover:underline">Google</a>
                         </p>
                         <p class="mt-5 inline-flex">
-                            Awesome Pages:
-                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
+                            <span class="font-bold">
+                                Awesome Pages:
+                            </span>
+                            <a href="https://rocket.blazed.space/" class="inline-flex px-2 text-sm capitalize text-gray-700 hover:underline">
                                 Rocket
                             </a>
                             &bull;
-                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://vapor.blazed.space/" class="inline-flex px-2 text-sm capitalize text-gray-700 hover:underline">
                                 Vapor
                             </a>
                             &bull;
-                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://triangle.blazed.space/" class="inline-flex px-2 text-sm capitalize text-gray-700 hover:underline">
                                 Triangle
                             </a>
                             &bull;
-                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 py-3 text-sm capitalize text-gray-700 hover:underline">
+                            <a href="https://jupiter.blazed.space/" class="inline-flex px-2 text-sm capitalize text-gray-700 hover:underline">
                                 Jupiter
                             </a>
                         </p>
