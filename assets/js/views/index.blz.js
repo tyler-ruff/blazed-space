@@ -9,7 +9,7 @@ function build_routes(page){
         case 'home':
         default:
             data = {
-                pageNum: 0,
+                pageNum: 4,
                 content: home()
             };
             break;
@@ -22,6 +22,7 @@ function home(){
         <div class="px-5 md:px-0 mt-10 pt-5 md:mt-20">
             <div class="bg-gray-50 py-20">
                 <div class="max-w-2xl mx-auto pt-0 md:pt-10">
+                    <img src="https://blazed.sirv.com/logo/john-mcmahon-ljjcoULkxL8-unsplash.jpg?w=600&h=400" width="600" height="400"/>
                     <form method="get" action="https://www.blazed.space/search.html" class="flex items-center">   
                         <label for="search" class="sr-only">Search</label>
                         <div class="relative w-full">
@@ -36,6 +37,24 @@ function home(){
                         <p class="mt-12 inline-flex">
                         ⚡ Search powered by:&nbsp;<a href="https://programmablesearchengine.google.com/" class="hover:underline">Google</a>
                         </p>
+                        <p class="mt-5 inline-flex">
+                            Awesome Pages:
+                            <a href="https://rocket.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                                Rocket
+                            </a>
+                            &bull;
+                            <a href="https://vapor.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                                Vapor
+                            </a>
+                            &bull;
+                            <a href="https://triangle.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                                Triangle
+                            </a>
+                            &bull;
+                            <a href="https://jupiter.blazed.space/" class="inline-flex px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:underline">
+                                Jupiter
+                            </a>
+                        </p>
                         <div class="hidden md:inline-flex mt-10 group cursor-pointer" style="float:right">
                             <div x-data="{ dropdownOpen: false }" class="relative">
                                 <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md bg-gray-50 group-hover:bg-gray-300 hover:bg-gray-300 active:bg-gray-300 p-2 focus:outline-none">
@@ -49,17 +68,17 @@ function home(){
                         
                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
                                     <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                                        <a href="https://rocket.blazed.space/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                            Rocket
+                                        <a href="https://blazed.games/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                            Concrete Games
                                         </a>
-                                        <a href="https://vapor.blazed.space/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                            Vapor
+                                        <a href="https://blazed.world/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                            Blazed World
                                         </a>
-                                        <a href="https://triangle.blazed.space/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                            Triangle
+                                        <a href="https://blazed.watch/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                            Blazed Watch
                                         </a>
-                                        <a href="https://jupiter.blazed.space/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                            Jupiter
+                                        <a href="https://blazed.software/" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                            Blazed Software
                                         </a>
                                     </div>
                             </div>

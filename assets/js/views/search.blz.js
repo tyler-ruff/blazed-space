@@ -9,7 +9,7 @@ function build_routes(page){
         case 'home':
         default:
             data = {
-                pageNum: 0,
+                pageNum: 5,
                 content: results()
             };
             break;
@@ -23,7 +23,9 @@ function results(){
         Search Results
         </h1>
         <div class="w-full md:max-w-2xl md:relative md:mx-auto">
-            <div class="gcse-searchresults-only"></div>
+            <div class="border">
+                <div class="gcse-searchresults-only"></div>
+            </div>
         </div>
     `;
 }

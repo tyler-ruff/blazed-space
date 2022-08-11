@@ -9,7 +9,7 @@ const siteConfig = {
     motto: 'We turn Dreams into Reality.',
     nav: [{
         text: "Home",
-        url: "https://blazed.space/"
+        url: "https://blz.one/"
     },
     {
         text: "Services",
@@ -245,7 +245,6 @@ function build_footer(config, document){
     logoInnerWrapper.appendChild(copyright);
     footer.appendChild(innerWrapper);
     blz_footer.appendChild(footer);
-    document.body.append(blz_footer);
-    //document.querySelector('.footer').innerHTML = blz_footer.innerHTML;
+    document.body.appendChild(blz_footer);
 }
 
