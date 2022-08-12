@@ -36,6 +36,7 @@ function home(){
                         <p class="mt-12 inline-flex">
                         ⚡ Search powered by:&nbsp;<a href="https://programmablesearchengine.google.com/" class="hover:underline">Google</a>
                         </p>
+                        <br />
                         <p class="mt-5 inline-flex">
                             <span class="font-bold">
                                 Awesome Pages:
