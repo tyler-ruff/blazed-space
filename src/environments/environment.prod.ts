@@ -11,7 +11,7 @@ export const environment = {
     measurementId: 'G-Y5ZW5STMX1',
   },
   sendinblue: {
-    apiKey: "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",
+    apiKey: process.env["SIB_API_KEY"],
     mailingListId: 2
   },
   production: true
