@@ -71,13 +71,17 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 ::selection{
-    background: #000;
+    background: #1f034b;
+    background: rgba(31, 3, 75, 0.8);
     color: #fff;
+    color:rgba(255,255,255,0.7);
 }
 
 ::-moz-selection{
-    background: #000;
+    background: #1f034b;
+    background: rgba(31, 3, 75, 0.8);
     color: #fff;
+    color:rgba(255,255,255,0.7);
 }
 
 body { 

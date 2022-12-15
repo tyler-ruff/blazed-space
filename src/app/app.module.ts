@@ -9,18 +9,21 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './lib/header/header.component';
 import { FooterComponent } from './lib/footer/footer.component';
 import { LazyLoadDirective } from './lazyload.directive';
-import { CtaComponent } from './lib/cta/cta.component';
+import { CtaComponent } from './components/cta/cta.component';
 import { HomeComponent } from './pages/home/home.component';
-import { IntroComponent } from './lib/intro/intro.component';
-import { MottoComponent } from './lib/motto/motto.component';
+import { IntroComponent } from './components/intro/intro.component';
+import { MottoComponent } from './components/motto/motto.component';
 import { HrComponent } from './lib/hr/hr.component';
-import { ContactInfoComponent } from './lib/contact-info/contact-info.component';
+import { ContactInfoComponent } from './components/contact-info/contact-info.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
+import { PhoneFormatPipe } from './utils/format-phone-pipe/format-phone.pipe';
+
 import { CommonModule } from '@angular/common';
+import { CompaniesComponent } from './pages/companies/companies.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { CommonModule } from '@angular/common';
     HrComponent,
     ContactInfoComponent,
     ServicesComponent,
-    ProductsComponent
+    ProductsComponent,
+    CompaniesComponent,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,
