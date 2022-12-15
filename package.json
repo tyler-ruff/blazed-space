@@ -23,9 +23,11 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@angular/service-worker": "~13.3.0",
+    "@tailwindcss/forms": "^0.5.3",
     "daisyui": "^2.42.1",
     "libphonenumber-js": "^1.10.15",
     "rxjs": "~7.5.0",
+    "sib-api-v3-sdk": "^8.4.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

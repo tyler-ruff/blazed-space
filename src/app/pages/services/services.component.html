@@ -2,7 +2,7 @@
     <h1 class="text-3xl font-bold px-20 lg:px-0 text-center py-10">
         Our Services
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 px-5 lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 px-5 lg:px-10 select-none">
         <div *ngFor="let service of services$ | async">
             <a title="{{ service.name }} Services" class="group inline-flex" href="{{ service.website }}">
                 <div class="inline-flex card min-w-96 max-h-96 bg-base-100 shadow-lg group-hover:shadow-xl">
@@ -27,6 +27,6 @@
         </div>
     </div>
     <div>
-        <blz-contact-info></blz-contact-info>
+        <blz-motto></blz-motto>
     </div>
 </article>

@@ -1,0 +1,82 @@
+<!--
+  This component uses @tailwindcss/forms
+
+  yarn add @tailwindcss/forms
+  npm install @tailwindcss/forms
+
+  plugins: [require('@tailwindcss/forms')]
+-->
+
+<div class="pt-10 mx-10">
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24 lg:max-w-4xl realitve mx-auto newsletter shadow-lg rounded-xl m-20 xl:m-50">
+    <div class="mx-auto max-w-lg text-center">
+      <label for="blz-newsletter-email-field" class="select-none">
+      <h2 class="text-lg md:text-2xl font-bold text-gray-900 md:text-3xl">
+        Want to stay informed about Blazed Product updates and new-releases?
+      </h2>
+
+      <p class="hidden text-gray-700 sm:mt-4 sm:block">
+        Sign up for our newletter to receive updates about new releases, features, and bugfixes.
+        Its 100% free, and you can cancel anytime.
+      </p>
+      </label>
+    </div>
+
+    <div class="mx-auto mt-8 max-w-xl">
+      <form action="#" class="sm:flex sm:gap-4">
+        <div class="sm:flex-1">
+          <label for="email" class="sr-only">Email</label>
+
+          <input
+            required
+            #newsletterEmail
+            id="blz-newsletter-email-field"
+            type="email"
+            placeholder="Email address"
+            class="w-full rounded-lg bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-indigo-400"
+          />
+        </div>
+
+        <button (click)="signup(newsletterEmail.value);newsletterEmail.value = '';" type="button" class="btn group mt-4 flex w-full items-center justify-center rounded-md bg-indigo-700 hover:bg-indigo-800 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-indigo-400 sm:mt-0 sm:w-auto">
+          <span class="text-sm font-medium"> 
+            Sign Up 
+          </span>
+
+          <svg class="ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+      </form>
+      <ng-container *ngIf="error === 1">
+        <div class="alert alert-error shadow-lg mt-5">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="font-bold">
+              Error! Invalid email provided.
+            </span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="error === 2">
+        <div class="alert alert-error shadow-lg mt-5">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="font-bold">
+              Error! Email already signed up.
+            </span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="success === 1">
+        <div class="alert alert-success shadow-lg mt-5">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="font-bold">
+              Success! You have been signed up for the newsletter.
+            </span>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

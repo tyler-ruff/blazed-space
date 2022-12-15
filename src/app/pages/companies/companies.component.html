@@ -1,89 +1,94 @@
-<article class="sm:max-w-2xl realitve mx-5 md:mx-auto p-5">
-    <h1 class="py-5 text-3xl text-center mb-10 font-bold">
-        Our Companies
-    </h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2">
-        <div *ngFor="let company of companies" class="mx-2">
-            <div class="w-full max-w-lg mb-5 overflow-hidden bg-white rounded-lg shadow-xl">
-                <img title="Company Logo" class="object-cover object-center w-full h-46 select-none" src="{{ company.logo }}?w=500&h=500" alt="{{ company.name}}'s Logo">
-            
-                <div title="Entity Id" class="flex items-center px-6 py-3 bg-gray-900 select-all">
-                    <svg aria-label="identity badge icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" fill="none" viewBox="0 0 384 512">
-                       <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm96 320h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM144 64h96c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
-                    </svg>
-            
-                    <h1 class="entity-id mx-3 text-lg text-white">
-                        {{ company.entityId }}
-                    </h1>
-                </div>
-            
-                <div class="px-6 py-4">
-                    <h1 title="Company Name" class="text-xl font-semibold text-gray-800">
-                        {{ company.name }}
-                    </h1>
-            
-                    <p title="Company Motto" class="py-2 text-gray-600">
-                        {{ company.description }}
-                    </p>
-            
-                    <div title="Industry" class="flex items-center mt-4 text-gray-700 pt-5 border-t border-gray-200">
-                        <svg aria-label="suitcase icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 11H10V13H14V11Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z"/>
+<article>
+    <div class="sm:max-w-md md:max-w-full relative md:mx-5 xl:mx-10 mx-auto p-5">
+        <h1 class="py-5 text-3xl text-center mb-10 font-bold">
+            Our Companies
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div *ngFor="let company of companies" class="sm:mx-2">
+                <div class="w-full max-w-lg mb-5 overflow-hidden bg-white border border-gray-200 rounded-lg shadow-xl">
+                    <img title="Company Logo" class="object-cover object-center w-full h-46 select-none" src="{{ company.logo }}?w=500&h=500" alt="{{ company.name}}'s Logo">
+                
+                    <div title="Entity Id" class="flex items-center px-6 py-3 bg-gray-900 select-all">
+                        <svg aria-label="identity badge icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" fill="none" viewBox="0 0 384 512">
+                        <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm96 320h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM144 64h96c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
                         </svg>
-            
-                        <h3 class="px-2 text-sm">
-                            {{ company.industry }}
-                        </h3>
+                
+                        <h1 class="entity-id mx-3 text-lg text-white">
+                            {{ company.entityId }}
+                        </h1>
                     </div>
-            
-                    <div title="Location" class="flex items-center mt-4 text-gray-700">
-                        <svg aria-label="location pin icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.063 10.063 6.27214 12.2721 6.27214C14.4813 6.27214 16.2721 8.063 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16757 11.1676 8.27214 12.2721 8.27214C13.3767 8.27214 14.2721 9.16757 14.2721 10.2721Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.79417 16.5183C2.19424 13.0909 2.05438 7.3941 5.48178 3.79418C8.90918 0.194258 14.6059 0.0543983 18.2059 3.48179C21.8058 6.90919 21.9457 12.606 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.9732 6.93028 5.17326C9.59603 2.37332 14.0268 2.26454 16.8268 4.93029C19.6267 7.59604 19.7355 12.0269 17.0698 14.8268Z"/>
-                        </svg>
-            
-                        <h3 class="px-2 text-sm">
-                            {{ company.location }}
-                        </h3>
-                    </div>
-            
-                    <div title="Email" class="flex items-center mt-4 text-gray-700">
-                        <svg aria-label="email icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z"/>
-                        </svg>
-            
-                        <h3 class="px-2 text-sm">
-                            <a href="mailto:{{ company.email }}" class="hover:underline">
-                                {{ company.email }}
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div title="Telephone" class="flex items-center mt-4 text-gray-700 pb-5 border-b border-gray-200">
-                        <svg aria-label="phone icon" class="w-5 h-5 fill-current" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
-                        </svg>
-            
-                        <h3 class="px-2 text-sm">
-                            <a href="tel:{{ company.phone }}" class="hover:underline">
-                                {{ company.phone | phoneFormat }}
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="flex items-center mt-7 mb-3 text-gray-700 justify-center">
-                        <a title="Company Website" href="{{ company.url }}" target="_blank" class="group p-3 btn">
-                            <svg aria-label="website icon" class="inline-flex w-5 h-5 fill-current" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 21 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/>
+                
+                    <div class="px-6 py-4">
+                        <h1 title="Company Name" class="text-xl font-semibold text-gray-800 select-all">
+                            {{ company.name }}
+                        </h1>
+                
+                        <p title="Company Motto" class="py-2 text-gray-600 select-none">
+                            {{ company.description }}
+                        </p>
+                
+                        <div title="Industry" class="flex items-center mt-4 text-gray-700 pt-5 border-t border-gray-200">
+                            <svg aria-label="suitcase icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 11H10V13H14V11Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z"/>
                             </svg>
-                            <h3 class="inline-flex px-2 text-sm">
-                                <span class="font-normal">
-                                    Visit Site
-                                </span>
+                
+                            <h3 class="px-2 text-sm select-all">
+                                {{ company.industry }}
                             </h3>
-                        </a>
+                        </div>
+                
+                        <div title="Location" class="flex items-center mt-4 text-gray-700">
+                            <svg aria-label="location pin icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.063 10.063 6.27214 12.2721 6.27214C14.4813 6.27214 16.2721 8.063 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16757 11.1676 8.27214 12.2721 8.27214C13.3767 8.27214 14.2721 9.16757 14.2721 10.2721Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.79417 16.5183C2.19424 13.0909 2.05438 7.3941 5.48178 3.79418C8.90918 0.194258 14.6059 0.0543983 18.2059 3.48179C21.8058 6.90919 21.9457 12.606 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.9732 6.93028 5.17326C9.59603 2.37332 14.0268 2.26454 16.8268 4.93029C19.6267 7.59604 19.7355 12.0269 17.0698 14.8268Z"/>
+                            </svg>
+                
+                            <h3 class="px-2 text-sm select-all">
+                                {{ company.location }}
+                            </h3>
+                        </div>
+                
+                        <div title="Email" class="flex items-center mt-4 text-gray-700 select-none">
+                            <svg aria-label="email icon" class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z"/>
+                            </svg>
+                
+                            <h3 class="px-2 text-sm">
+                                <a href="mailto:{{ company.email }}" class="hover:underline">
+                                    {{ company.email }}
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div title="Telephone" class="flex items-center mt-4 text-gray-700 pb-5 border-b border-gray-200 select-none">
+                            <svg aria-label="phone icon" class="w-5 h-5 fill-current" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                            </svg>
+                
+                            <h3 class="px-2 text-sm">
+                                <a href="tel:{{ company.phone }}" class="hover:underline">
+                                    {{ company.phone | phoneFormat }}
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div class="flex items-center mt-7 mb-3 text-gray-700 justify-center">
+                            <a title="Company Website" href="{{ company.url }}" target="_blank" class="group p-3 btn">
+                                <svg aria-label="website icon" class="inline-flex w-5 h-5 fill-current" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 21 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/>
+                                </svg>
+                                <h3 class="inline-flex px-2 text-sm">
+                                    <span class="font-normal">
+                                        Visit Site
+                                    </span>
+                                </h3>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="contact-info">
+        <blz-contact-info></blz-contact-info>
     </div>
 </article>
