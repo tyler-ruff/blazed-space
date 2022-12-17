@@ -10,9 +10,5 @@ export const environment = {
     messagingSenderId: '817319905653',
     measurementId: 'G-Y5ZW5STMX1',
   },
-  sendinblue: {
-    apiKey: "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",
-    mailingListId: 2
-  },
   production: true
 };

@@ -15,11 +15,12 @@ import { IntroComponent } from './components/intro/intro.component';
 import { MottoComponent } from './components/motto/motto.component';
 import { HrComponent } from './lib/hr/hr.component';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
-import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+import { HttpClientModule } from '@angular/common/http';
 
 import { PhoneFormatPipe } from './utils/format-phone-pipe/format-phone.pipe';
 
@@ -37,17 +38,17 @@ import { CompaniesComponent } from './pages/companies/companies.component';
     CtaComponent,
     IntroComponent,
     MottoComponent,
-    NewsletterComponent,
     HrComponent,
     ContactInfoComponent,
     ServicesComponent,
     ProductsComponent,
     CompaniesComponent,
-    PhoneFormatPipe,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CommonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
