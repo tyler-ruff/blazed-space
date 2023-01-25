@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AppService } from 'src/app/shared/app.service';
+
 import { Company } from 'src/app/models/company.model';
+
+import { page } from './companies.page'; 
 
 @Component({
   selector: 'app-companies',
@@ -8,6 +12,9 @@ import { Company } from 'src/app/models/company.model';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit {
+
+  public page = page;
+
   companies: Company[] = [
     {
       name: "Blazed Labs LLC",
@@ -54,7 +61,10 @@ export class CompaniesComponent implements OnInit {
       entityId: "0450842898"
     }
   ] as Company[];
-  constructor() { }
+
+  constructor(private appService: AppService) {
+    appService.setPage(page);
+  }
 
   ngOnInit(): void {
   }

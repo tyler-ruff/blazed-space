@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'blz-cta',
+  selector: 'app-cta',
   templateUrl: './cta.component.html',
   styleUrls: ['./cta.component.css']
 })

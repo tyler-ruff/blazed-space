@@ -5,45 +5,61 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NavComponent } from './components/nav/nav.component';
-import { HeaderComponent } from './lib/header/header.component';
-import { FooterComponent } from './lib/footer/footer.component';
-import { LazyLoadDirective } from './lazyload.directive';
-import { CtaComponent } from './components/cta/cta.component';
+
+// Services
+import { AppService } from './shared/app.service';
+
+// Pages 
 import { HomeComponent } from './pages/home/home.component';
-import { IntroComponent } from './components/intro/intro.component';
-import { MottoComponent } from './components/motto/motto.component';
-import { HrComponent } from './lib/hr/hr.component';
-import { ContactInfoComponent } from './components/contact-info/contact-info.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CompaniesComponent } from './pages/companies/companies.component';
+
+
+// Components
+import { LayoutComponent } from './components/layout/layout.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HrComponent } from './components/hr/hr.component';
+
+//Widgets
+import { CtaComponent } from './widgets/cta/cta.component';
+import { IntroComponent } from './widgets/intro/intro.component';
+import { MottoComponent } from './widgets/motto/motto.component';
+import { ContactInfoComponent } from './widgets/contact-info/contact-info.component';
+
+// Utilities
+import { LazyLoadDirective } from './utils/lazyload.directive';
+import { PhoneFormatPipe } from './utils/format-phone.pipe';
+import { RelativeTimePipe } from './utils/relative-time.pipe';
+
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { PhoneFormatPipe } from './utils/format-phone-pipe/format-phone.pipe';
-
 import { CommonModule } from '@angular/common';
-import { CompaniesComponent } from './pages/companies/companies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    LayoutComponent,
     LazyLoadDirective,
+    PhoneFormatPipe,
+    RelativeTimePipe,
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    HrComponent,
+    HomeComponent,
     CtaComponent,
     IntroComponent,
     MottoComponent,
-    HrComponent,
+    CompaniesComponent,
     ContactInfoComponent,
     ServicesComponent,
-    ProductsComponent,
-    CompaniesComponent,
-    PhoneFormatPipe
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +75,9 @@ import { CompaniesComponent } from './pages/companies/companies.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

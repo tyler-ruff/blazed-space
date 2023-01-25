@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'blz-motto',
+  selector: 'app-motto',
   templateUrl: './motto.component.html',
   styleUrls: ['./motto.component.css']
 })
