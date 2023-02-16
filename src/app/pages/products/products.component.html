@@ -2,16 +2,27 @@
     <h1 class="text-3xl font-bold px-20 lg:px-0 text-center py-10">
         Our Products
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10 select-none">
-        <div *ngFor="let product of products$ | async">
+    <div itemscope itemtype="https://schema.org/ProductCollection" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10 select-none">
+        <meta itemprop="name" content="Blazed Labs Products" />
+        <meta itemprop="description" content="Products offered by Blazed Labs LLC." />
+        <meta itemprop="identifier" content="99a64112-0515-40f0-bb40-1c5cefaa252c"/>
+        <meta itemprop="copyrightHolder" content="Blazed Labs LLC" />
+        <meta itemprop="copyrightYear" content="2023" />
+        <article *ngFor="let product of products$ | async" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <meta itemprop="name" content="{{ product.name }}" />
+            <meta itemprop="description" content="{{ product.description }}" />
+            <meta itemprop="image" content="{{ product.image }}" />
+            <meta itemprop="url" content="{{ product.website }}" />
             <a class="group inline-flex" href="{{ product.website }}">
                 <div class="inline-flex card min-w-96 h-96 bg-base-100 shadow-xl">
-                    <figure><img src="{{ product.image }}" alt="Shoes" /></figure>
+                    <figure itemprop="image">
+                        <img src="{{ product.image }}" alt="Product Image" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="card-title group-hover:underline">
+                        <h2 itemprop="name" class="card-title group-hover:underline">
                             {{ product.name }}
                         </h2>
-                        <p>
+                        <p itemprop="description">
                             {{ product.description }}
                         </p>
                         <div class="card-actions justify-end">
@@ -22,6 +33,6 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </article>
     </div>
 </div>

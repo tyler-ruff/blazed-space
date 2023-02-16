@@ -55,7 +55,7 @@ export class CompaniesComponent implements OnInit {
       industry: "Asset Management",
       location: "New Jersey, USA",
       email: "hello@ruff-manage.com",
-      url: "https://rtmtransit.com/",
+      url: "https://ruff-manage.com/",
       phone: "+18338870061",
       logo: "https://blazed.sirv.com/ruff-manage.com/ruff-lion.png",
       entityId: "0450842898"
