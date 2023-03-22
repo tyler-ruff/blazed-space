@@ -2,7 +2,12 @@
     <blz-header></blz-header>
 </header>
 <main>
-    <ng-content></ng-content>
+    <div *ngIf="loading" class="w-24 relative mx-auto pb-10">
+        <app-spinner></app-spinner>
+    </div>
+    <div *ngIf="!loading">
+        <ng-content></ng-content>
+    </div>
 </main>
 <footer>
     <blz-footer></blz-footer>
