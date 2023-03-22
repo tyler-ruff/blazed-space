@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 import { page } from './products.page';
 import { Product } from 'src/app/models/product.model';
@@ -12,10 +12,10 @@ import { AppService } from 'src/app/shared/app.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements AfterViewInit {
 
   public page = page;
-
+  public loading: boolean = true;
   products$: Observable<Product[]>;
   constructor(private appService: AppService, firestore: Firestore) { 
     appService.setPage(page);
@@ -23,8 +23,13 @@ export class ProductsComponent implements OnInit {
     this.products$ = collectionData(col) as Observable<Product[]>;
   }
 
+  load_complete(){
+    this.loading = false;
+  }
 
-  ngOnInit(): void {
+
+  ngAfterViewInit(): void {
+    this.load_complete();
   }
 
 }

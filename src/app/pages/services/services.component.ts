@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 import { page } from './services.page';
 import { Service } from './../../models/service.model';
@@ -12,9 +12,10 @@ import { AppService } from 'src/app/shared/app.service';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent implements AfterViewInit {
 
   public page = page;
+  public loading: boolean = true;
 
   services$: Observable<Service[]>;
   constructor(private appService: AppService,firestore: Firestore) { 
@@ -23,7 +24,12 @@ export class ServicesComponent implements OnInit {
     this.services$ = collectionData(col) as Observable<Service[]>;
   }
 
-  ngOnInit(): void {
+  load_complete(){
+    this.loading = false;
+  }
+
+  ngAfterViewInit(): void {
+    this.load_complete();
   }
 
 }

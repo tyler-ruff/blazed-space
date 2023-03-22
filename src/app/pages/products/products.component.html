@@ -2,6 +2,9 @@
     <h1 class="text-3xl font-bold px-20 lg:px-0 text-center py-10">
         Our Products
     </h1>
+    <div *ngIf="loading" class="w-24 relative mx-auto pb-10">
+        <app-spinner></app-spinner>
+    </div>
     <div itemscope itemtype="https://schema.org/ProductCollection" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10 select-none">
         <meta itemprop="name" content="Blazed Labs Products" />
         <meta itemprop="description" content="Products offered by Blazed Labs LLC." />

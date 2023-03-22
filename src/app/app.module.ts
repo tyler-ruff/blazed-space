@@ -40,6 +40,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CommonModule } from '@angular/common';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { CommonModule } from '@angular/common';
     CompaniesComponent,
     ContactInfoComponent,
     ServicesComponent,
-    ProductsComponent
+    ProductsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
