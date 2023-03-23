@@ -1,4 +1,4 @@
-<div class="footer p-10 bg-base-200 text-base-content pl-20 pr-20 footer-links">
+<div class="footer p-10 bg-base-200 text-base-content px-10 lg:px-20 footer-links">
   <ng-container *ngFor="let linkBlock of site.footerLinks">
     <div class="lg:w-1/4 md:w-1/2 w-full px-4">
       <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
@@ -30,10 +30,10 @@
     </p>
   </div>
 </div> 
-<div class="footer pl-20 pr-20 py-4 border-t bg-base-200 text-base-content border-base-300">
-  <div class="items-center grid-flow-col">
-    <img class="transition-opacity group-hover:opacity-75" src="https://blazed.sirv.com/logo/Beaker-Dark.png?w=35&h=35">
-    <p>
+<div class="footer block px-10 py-10 lg:py-4 lg:px-20 border-t bg-base-200 text-base-content border-base-300">
+  <div class="md:block text-center lg:text-right grid-flow-col">
+    <img class="md:relative lg:relative md:mx-auto md:pb-3 transition-opacity group-hover:opacity-75" src="https://blazed.sirv.com/logo/Beaker-Dark.png?w=35&h=35">
+    <p class="px-5 text-md md:text-sm font-bold">
       {{ app.company }}
       <br />
       <a title="We'd love to hear your feedback!" href="https://forms.gle/f9F4SRyfpKdAHJ1R6" target="_blank" class="block md:inline text-gray-600 ml-1 group hover:text-gray-500 active:text-gray-700 pt-2 md:pt-0">
@@ -46,7 +46,7 @@
       </a>
     </p>
   </div> 
-  <div class="md:place-self-center md:justify-self-end">
+  <div class="hidden lg:block md:place-self-center md:justify-self-end">
     <span class="inline-flex sm:ml-auto sm:mt-0 pl-2 mt-2 justify-center sm:justify-start">
       <span class="inline-flex" *ngIf="app.social.facebook !== undefined">
         <a title="Check us out on Facebook" href="{{ app.social.facebook.url }}" target="_social" class="text-gray-500 hover:text-black">
