@@ -1,6 +1,5 @@
 # blazed-space
 Products & Services offered by Blazed Labs.
-
 - [View Site](https://blazed.space/)
 
 ## Installing
