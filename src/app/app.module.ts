@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 // Services
@@ -15,13 +17,13 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
 
-
 // Components
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HrComponent } from './components/hr/hr.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 //Widgets
 import { CtaComponent } from './widgets/cta/cta.component';
@@ -37,10 +39,7 @@ import { RelativeTimePipe } from './utils/relative-time.pipe';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
-import { HttpClientModule } from '@angular/common/http';
 
-import { CommonModule } from '@angular/common';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [

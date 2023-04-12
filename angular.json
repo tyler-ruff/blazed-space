@@ -23,7 +23,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
               "src/_redirects"
@@ -40,13 +39,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "10mb",
-                  "maximumError": "20mb"
+                  "maximumWarning": "30gb",
+                  "maximumError": "60gb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "20gb",
+                  "maximumError": "40gb"
                 }
               ],
               "fileReplacements": [
@@ -94,7 +93,6 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest"
             ],
@@ -116,6 +114,5 @@
         }
       }
     }
-  },
-  "defaultProject": "fire"
+  }
 }

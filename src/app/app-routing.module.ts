@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CompaniesComponent } from './pages/companies/companies.component';
+
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { CompaniesComponent } from './pages/companies/companies.component';
 import { UnknownComponent } from './pages/unknown/unknown.component';
 
 import { PreloadAllModules } from '@angular/router';
