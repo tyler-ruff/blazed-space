@@ -48,20 +48,20 @@ export const site = {
             header: "Platforms",
             body: [
                 {
-                    text: "Gaming",
-                    link: "https://blazed.games/"
-                },
-                {
-                    text: "Media",
+                    text: "One",
                     link: "https://blz.one/"
                 },
                 {
-                    text: "World",
-                    link: "https://blazed.world/"
+                    text: "Work",
+                    link: "https://blazed.work/"
                 },
                 {
-                    text: "Software",
-                    link: "https://blazed.software/"
+                    text: "City",
+                    link: "https://blazed.city/"
+                },
+                {
+                    text: "Projects",
+                    link: "https://blazed.quest/"
                 }
             ]
         },

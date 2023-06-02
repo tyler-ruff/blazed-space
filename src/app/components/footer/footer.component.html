@@ -14,14 +14,14 @@
     </div>
   </ng-container>
   <div class="md:relative md:w-250 md:mx-auto">
-    <p class="text-gray-500 text-sm text-center sm:text-left py-3 md:py-0">
+    <p class="select-none text-gray-500 text-sm text-center sm:text-left py-3 md:py-0">
       Telephone: 
-      <a title="Call Us" href="tel:+{{ app.phone }}" class="text-gray-600 hover:underline" target="_blank">
+      <a title="Call Us" href="tel:+{{ app.phone }}" class="inline-flex select-all text-gray-600 hover:underline" target="_blank">
         {{ app.phone | phoneFormat }}
       </a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       Email:
-      <a title="Email Us" href="mailto:{{ app.email }}" class="text-gray-600 hover:underline">
+      <a title="Email Us" href="mailto:{{ app.email }}" class="inline-flex select-all text-gray-600 hover:underline">
         {{ app.email }}
       </a>
     </p>
